@@ -2,6 +2,7 @@
 package modelo;
 
 import java.security.SecureRandom;
+import java.util.Date;
 
 public class Postulante {
     
@@ -13,7 +14,7 @@ public class Postulante {
     private String clave;
     
     private GradoEstudio grado;
-    
+    private PostulacionArreglo postulaciones;
     
 
     //constructor
@@ -39,7 +40,14 @@ public class Postulante {
     return true;
     }
     
-    
+    private boolean postular(Oferta oferta){
+        Date date = new Date();
+        Postulacion nuevapostulacion = new Postulacion(date,oferta);
+        
+        this.postulaciones.AgregarPostulacion(nuevapostulacion);
+        
+        return true;
+    }
     
     
     //getters y setteers

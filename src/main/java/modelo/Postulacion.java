@@ -9,4 +9,12 @@ public class Postulacion {
    private boolean anulado;
    private Date fechaAnulacion;
    
+   private Oferta oferta;
+
+    public Postulacion(Date fecha, Oferta oferta) {
+        this.fecha = fecha;
+        this.oferta = oferta;
+    }
+   
+   
 }

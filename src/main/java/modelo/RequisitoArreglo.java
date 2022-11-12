@@ -9,6 +9,7 @@ public class RequisitoArreglo {
     // constructor
     public RequisitoArreglo(int tamanio) {
         this.requisitos=new Requisito[tamanio];
+        this.indice=0;
     }
     
     //metodos
